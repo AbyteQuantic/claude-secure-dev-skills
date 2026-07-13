@@ -45,6 +45,10 @@ Los skills se activan por coincidencia con su descripción; para que **cualquier
 
 **Límite honesto**: un skill impone la *metodología* de Fable 5 (autonomía, verificación con evidencia, notas en tareas largas, disciplina de seguridad), que explica gran parte de la diferencia de resultados. Lo que NO puede transferir es la capacidad del modelo en sí (razonamiento, visión, contexto de millones de tokens) — para eso, el skill instruye al modelo a escalar honestamente a Fable 5/Opus cuando la tarea lo exige.
 
+## Estado del proyecto
+
+Las tareas pendientes están documentadas en [PENDIENTES.md](PENDIENTES.md) con comandos exactos, salida esperada y qué requiere autorización del usuario — escritas para que **cualquier agente de Claude Code con cualquier modelo** pueda ejecutarlas.
+
 ## Filosofía
 
 1. **La seguridad no es opcional**: todo código nuevo pasa por `secure-coding` al escribirse y por `security-gate` antes de commit.
