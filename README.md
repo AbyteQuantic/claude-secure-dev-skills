@@ -13,6 +13,7 @@ Mantenido por [AbyteQuantic](https://github.com/AbyteQuantic).
 | [`solid-development`](skills/solid-development/SKILL.md) | Desarrollo sólido: principios SOLID, clean code, disciplina de testing, manejo de errores, criterios de revisión. |
 | [`fable-5-guide`](skills/fable-5-guide/SKILL.md) | Identidad y diferenciadores de Claude Fable 5 (tier Mythos-class): capacidades, salvaguardas, precios, y cómo aprovecharlo en Claude Code. |
 | [`fable-5-mode`](skills/fable-5-mode/SKILL.md) | Modo de trabajo Fable 5 para cualquier modelo (Sonnet, Haiku, Opus): autonomía sostenida, evidencia sobre inferencia, notas propias en tareas largas, escalamiento honesto. |
+| [`spec-driven`](skills/spec-driven/SKILL.md) | Desarrollo contract-first: OpenAPI/AsyncAPI/proto como fuente de verdad, workflow de 5 fases, gates de CI, versionado y anti-patrones. Se activa al crear o modificar APIs, eventos o microservicios. |
 
 ## Instalación
 

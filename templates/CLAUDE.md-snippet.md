@@ -18,6 +18,8 @@ Al inicio de CUALQUIER tarea de desarrollo, diagnóstico o investigación, invoc
 
 Al escribir o modificar código, invoca además el skill `secure-coding`.
 Antes de cualquier commit/PR, invoca el skill `security-gate` — su veredicto BLOQUEADO detiene el commit.
+Al crear o modificar APIs REST, eventos async, gRPC o microservicios, invoca el skill `spec-driven`:
+la spec (OpenAPI/AsyncAPI/proto) se escribe y revisa ANTES que la implementación.
 ```
 
 Con esto, la instrucción vive en el contexto de sistema de cada sesión y el modelo carga los skills sin depender del matching automático de descripciones.
