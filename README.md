@@ -12,6 +12,7 @@ Mantenido por [AbyteQuantic](https://github.com/AbyteQuantic).
 | [`security-gate`](skills/security-gate/SKILL.md) | Compuerta de validación de seguridad obligatoria antes de commit/PR: escaneo de secretos, auditoría de dependencias, análisis estático, verificación binaria. |
 | [`solid-development`](skills/solid-development/SKILL.md) | Desarrollo sólido: principios SOLID, clean code, disciplina de testing, manejo de errores, criterios de revisión. |
 | [`fable-5-guide`](skills/fable-5-guide/SKILL.md) | Identidad y diferenciadores de Claude Fable 5 (tier Mythos-class): capacidades, salvaguardas, precios, y cómo aprovecharlo en Claude Code. |
+| [`fable-5-mode`](skills/fable-5-mode/SKILL.md) | Modo de trabajo Fable 5 para cualquier modelo (Sonnet, Haiku, Opus): autonomía sostenida, evidencia sobre inferencia, notas propias en tareas largas, escalamiento honesto. |
 
 ## Instalación
 
@@ -37,6 +38,12 @@ cp -r skills/* <repo>/.claude/skills/
 ```
 
 Salida esperada: los skills aparecen listados al ejecutar `/skills` (o en el listado de skills disponibles de la sesión).
+
+## Modo Fable 5 siempre activo (cualquier modelo)
+
+Los skills se activan por coincidencia con su descripción; para que **cualquier modelo de Anthropic trabaje como Fable 5 en TODAS las sesiones**, copia el bloque de [templates/CLAUDE.md-snippet.md](templates/CLAUDE.md-snippet.md) en el `CLAUDE.md` del proyecto (o en `~/.claude/CLAUDE.md` para todos tus proyectos). Eso ancla `fable-5-mode` + `secure-coding` + `security-gate` como comportamiento obligatorio de sesión.
+
+**Límite honesto**: un skill impone la *metodología* de Fable 5 (autonomía, verificación con evidencia, notas en tareas largas, disciplina de seguridad), que explica gran parte de la diferencia de resultados. Lo que NO puede transferir es la capacidad del modelo en sí (razonamiento, visión, contexto de millones de tokens) — para eso, el skill instruye al modelo a escalar honestamente a Fable 5/Opus cuando la tarea lo exige.
 
 ## Filosofía
 
