@@ -1,0 +1,22 @@
+{
+  "name": "abyte-quantic-skills",
+  "owner": {
+    "name": "AbyteQuantic",
+    "url": "https://github.com/AbyteQuantic"
+  },
+  "metadata": {
+    "description": "Marketplace de plugins de AbyteQuantic para Claude Code: desarrollo seguro, desarrollo sólido y guía del modelo Fable 5.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "secure-dev",
+      "source": "./",
+      "description": "Skills para validar y desarrollar siempre con seguridad en el código, aplicar principios de desarrollo sólido, y conocer los diferenciadores de Claude Fable 5.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AbyteQuantic"
+      }
+    }
+  ]
+}
