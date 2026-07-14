@@ -65,6 +65,10 @@ FROM llama3.1
 SYSTEM """<pega aquí el contenido de portable/AGENTS.md>"""
 ```
 
+## Atajo — prompt global de una sola pegada
+
+Si no quieres copiar archivos, usa el prompt compacto de [`prompt-global.md`](prompt-global.md): se pega como system prompt o primer mensaje en cualquier agente/cliente y se descarga solo el ruleset completo del repo si tiene acceso a red (o aplica las reglas base si no lo tiene).
+
 ## Nota de mantenimiento
 
 `portable/AGENTS.md` es una destilación de los skills de este repo. Si actualizas un skill (`skills/*/SKILL.md`), revisa si el cambio también aplica al portable y sincronízalo. El portable es intencionalmente más corto y prescriptivo que los skills completos, porque los modelos pequeños tienen ventanas de contexto reducidas.

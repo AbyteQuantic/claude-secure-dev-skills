@@ -46,6 +46,7 @@ Los clientes que no son Claude Code no leen el formato `SKILL.md`, pero sí el e
 
 - [`portable/AGENTS.md`](portable/AGENTS.md) — el ruleset portable, drop-in para OpenCode, Cursor, Aider, Windsurf, Zed, Gemini CLI, Copilot y +20 herramientas, o pegable como system prompt en cualquier API/chat.
 - [`portable/clients.md`](portable/clients.md) — instrucciones de instalación exactas por cliente.
+- [`portable/prompt-global.md`](portable/prompt-global.md) — prompt corto autosuficiente para pegar en cualquier agente/cliente; se descarga solo el ruleset completo si tiene red, o aplica las reglas base si no.
 
 Ejemplo (OpenCode global):
 ```bash

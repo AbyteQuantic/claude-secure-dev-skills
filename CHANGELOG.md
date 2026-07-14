@@ -2,6 +2,11 @@
 
 Todos los cambios notables de este repositorio. Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/); versionado [SemVer](https://semver.org/lang/es/).
 
+## [1.2.1] — 2026-07-13
+
+### Añadido
+- `portable/prompt-global.md`: prompt corto autosuficiente para pegar en cualquier agente/cliente; descarga solo el ruleset completo del repo si tiene red, o aplica las reglas base si no. Enlazado desde README y `clients.md`.
+
 ## [1.2.0] — 2026-07-13
 
 ### Añadido
