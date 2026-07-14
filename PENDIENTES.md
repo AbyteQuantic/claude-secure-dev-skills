@@ -11,7 +11,7 @@ Contexto de la máquina objetivo (Windows 11, usuario Bryan):
 
 ## Tarea 1 — Instalar los skills globalmente en la máquina del usuario
 
-**Estado**: pendiente. **Autorización**: ya otorgada por el usuario (pidió dejar esto listo).
+**Estado**: completada (2026-07-13). Evidencia: `ls ~/.claude/skills` lista los 6 skills (`secure-coding` con su carpeta `references/` incluida). No hubo colisiones — el directorio no existía. Los skills quedan activos a partir de la siguiente sesión de Claude Code.
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -53,16 +53,20 @@ Nota: mientras sea privado, `/plugin marketplace add AbyteQuantic/claude-secure-
 
 ## Tarea 4 — Probar el plugin de punta a punta
 
-**Estado**: pendiente. La estructura ya pasó `claude plugin validate .` (ejecutado 2026-07-13, resultado: ✔ Validation passed), pero falta la prueba funcional.
+**Estado**: parcialmente completada (2026-07-13). Verificado con evidencia:
+- `claude plugin validate .` → ✔ Validation passed (estructura + marketplace.json).
+- Frontmatter de los 6 SKILL.md parseado OK: YAML válido, `description` presente en todos, longitudes 303–455 caracteres (límite: 1.536).
+
+**Lo que falta (bloqueado en entorno headless)**: la prueba en sesión viva. El intento `claude --plugin-dir . -p "..."` desde una sesión agente falla con `401 Invalid authentication credentials` — las sesiones anidadas en sandbox no heredan credenciales. DEBE ejecutarse en una terminal interactiva del usuario:
 
 ```bash
 cd /c/Users/Bryan/skills/claude-secure-dev-skills
-claude --plugin-dir . 
+claude --plugin-dir .
 ```
 
 Dentro de la sesión: ejecutar `/secure-dev:fable-5-guide` y verificar que responde con el contenido del skill. Probar también que una pregunta tipo "¿qué diferencia a Fable 5 de Opus?" carga el skill automáticamente.
 
-**Criterio de éxito**: los 5 skills invocables con namespace `secure-dev:` y activación automática funcionando.
+**Criterio de éxito**: los 6 skills invocables con namespace `secure-dev:` y activación automática funcionando. Nota: como la Tarea 1 ya instaló los skills en `~/.claude/skills/`, cualquier sesión nueva también los tiene sin namespace (`/fable-5-guide`) — la prueba con `--plugin-dir` valida específicamente la distribución como plugin.
 
 ## Tarea 5 — (Opcional) Publicar en el marketplace comunitario de Anthropic
 
