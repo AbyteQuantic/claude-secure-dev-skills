@@ -27,14 +27,9 @@ ls ~/.claude/skills
 
 ## Tarea 2 — Anclar el modo Fable 5 en el CLAUDE.md global
 
-**Estado**: pendiente. **Autorización**: requiere confirmación del usuario ANTES de editar, porque `~/.claude/CLAUDE.md` es su configuración global y ya contiene reglas críticas propias.
+**Estado**: completada (2026-07-13). El usuario autorizó explícitamente ("Sí, ejecuta la Tarea 2"). Se verificó que no existía sección "Modo de trabajo obligatorio" previa (`grep` → NO_EXISTE) y se agregó la sección "🧭 Modo de trabajo obligatorio" al FINAL de `~/.claude/CLAUDE.md`, sin tocar ninguna de las reglas críticas existentes. Referencia cruzada con REGLA CRÍTICA #2 (entender el flujo) y #6 (spec-driven) incluida.
 
-1. Leer `~/.claude/CLAUDE.md` completo ANTES de tocar nada.
-2. Verificar que no exista ya una sección "Modo de trabajo obligatorio" (evitar duplicados).
-3. **Agregar al final** (nunca reemplazar ni reordenar lo existente) el bloque de [templates/CLAUDE.md-snippet.md](templates/CLAUDE.md-snippet.md).
-4. Mostrar al usuario el diff exacto que se va a aplicar y esperar su "sí".
-
-**Verificación**: en una sesión nueva, pedir una tarea trivial de código y confirmar que el agente invoca `fable-5-mode` sin que se lo pidan.
+**Verificación pendiente de sesión nueva**: en la siguiente sesión, pedir una tarea trivial de código y confirmar que el agente invoca `fable-5-mode` sin que se lo pidan.
 
 ## Tarea 3 — Decidir visibilidad del repositorio (decisión del usuario)
 
@@ -70,7 +65,7 @@ Dentro de la sesión: ejecutar `/secure-dev:fable-5-guide` y verificar que respo
 
 ## Tarea 5 — (Opcional) Publicar en el marketplace comunitario de Anthropic
 
-**Estado**: no iniciada. **Prerrequisitos**: Tarea 3 resuelta como público + Tarea 4 en verde + autorización explícita del usuario.
+**Estado**: bloqueada — requiere acción manual del usuario (2026-07-13). Prerrequisitos: Tarea 3 (público) ✅ resuelta; Tarea 4 en verde ⚠️ falta la prueba interactiva; validación `claude plugin validate .` ✅ pasa. El envío NO puede automatizarlo el agente: el formulario de Console (<https://platform.claude.com/plugins/submit>) requiere la sesión autenticada del usuario en claude.ai/Console y es una publicación pública irreversible. El usuario debe completarlo manualmente cuando decida.
 
 1. Correr `claude plugin validate .` una vez más (el pipeline de revisión ejecuta el mismo check).
 2. Enviar mediante el formulario de Console: <https://platform.claude.com/plugins/submit> (la vía para autores individuales sin organización Team/Enterprise).
@@ -78,7 +73,7 @@ Dentro de la sesión: ejecutar `/secure-dev:fable-5-guide` y verificar que respo
 
 ## Tarea 6 — Mantenimiento del contenido de Fable 5
 
-**Estado**: continuo. Los datos de `skills/fable-5-guide/SKILL.md` se verificaron el 2026-07-12/13 contra el anuncio y la página de producto de Anthropic. Los benchmarks provienen de agregadores de terceros.
+**Estado**: continuo — al día (re-verificado 2026-07-13). Precio ($10/$50 por MTok), model ID (`claude-fable-5`) y disponibilidad confirmados sin cambios contra <https://www.anthropic.com/claude/fable>. Los benchmarks provienen de agregadores de terceros. Próxima revisión sugerida: al retomar el repo tras semanas/meses.
 
 Al retomar este repo después de semanas/meses:
 1. Re-verificar precios, context window y disponibilidad contra <https://www.anthropic.com/claude/fable>.
