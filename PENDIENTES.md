@@ -38,7 +38,7 @@ ls ~/.claude/skills
 
 ## Tarea 3 — Decidir visibilidad del repositorio (decisión del usuario)
 
-**Estado**: el repo está **privado**. **Autorización**: SOLO el usuario decide — el agente NO debe hacerlo público por iniciativa propia bajo ninguna circunstancia (publicar contenido es irreversible en la práctica: puede ser indexado/cacheado).
+**Estado**: completada (2026-07-13). El usuario autorizó explícitamente ("publica nuestro repo"). Ejecutado `gh repo edit --visibility public`; verificado: `visibility = PUBLIC`. El repo ya es instalable como marketplace por cualquiera.
 
 Si el usuario dice explícitamente "hazlo público":
 
