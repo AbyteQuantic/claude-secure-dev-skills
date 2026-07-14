@@ -48,9 +48,13 @@ Nota: mientras sea privado, `/plugin marketplace add AbyteQuantic/claude-secure-
 
 ## Tarea 4 — Probar el plugin de punta a punta
 
-**Estado**: parcialmente completada (2026-07-13). Verificado con evidencia:
+**Estado**: verificación estructural completa (2026-07-13); solo falta la invocación en vivo. Evidencia:
 - `claude plugin validate .` → ✔ Validation passed (estructura + marketplace.json).
 - Frontmatter de los 6 SKILL.md parseado OK: YAML válido, `description` presente en todos, longitudes 303–455 caracteres (límite: 1.536).
+- Namespace consistente: `plugin.json name = secure-dev` = plugin en `marketplace.json` → invocación `/secure-dev:<skill>` para los 6 skills.
+- Comando de install del README coincide con manifiestos (`secure-dev@abyte-quantic-skills`).
+- Sin links internos markdown rotos en todo el repo.
+- Instalación global sin deriva: `diff -rq` entre `skills/` del repo y `~/.claude/skills/` → idénticos.
 
 **Lo que falta (bloqueado en entorno headless)**: la prueba en sesión viva. El intento `claude --plugin-dir . -p "..."` desde una sesión agente falla con `401 Invalid authentication credentials` — las sesiones anidadas en sandbox no heredan credenciales. DEBE ejecutarse en una terminal interactiva del usuario:
 
