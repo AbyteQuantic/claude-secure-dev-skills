@@ -1,7 +1,7 @@
 {
   "name": "secure-dev",
   "description": "Skills de desarrollo seguro y sólido para Claude Code: secure-coding, security-gate, solid-development y guía del modelo Fable 5.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": {
     "name": "AbyteQuantic",
     "url": "https://github.com/AbyteQuantic"

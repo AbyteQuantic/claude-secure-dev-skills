@@ -40,6 +40,18 @@ cp -r skills/* <repo>/.claude/skills/
 
 Salida esperada: los skills aparecen listados al ejecutar `/skills` (o en el listado de skills disponibles de la sesión).
 
+### Opción C — Otros clientes y modelos gratuitos (OpenCode, Cursor, Aider…)
+
+Los clientes que no son Claude Code no leen el formato `SKILL.md`, pero sí el estándar abierto [AGENTS.md](https://agents.md). En [`portable/`](portable/) hay una versión model-agnostic de la metodología, calibrada para modelos gratuitos/pequeños (más prescriptiva y con checklists):
+
+- [`portable/AGENTS.md`](portable/AGENTS.md) — el ruleset portable, drop-in para OpenCode, Cursor, Aider, Windsurf, Zed, Gemini CLI, Copilot y +20 herramientas, o pegable como system prompt en cualquier API/chat.
+- [`portable/clients.md`](portable/clients.md) — instrucciones de instalación exactas por cliente.
+
+Ejemplo (OpenCode global):
+```bash
+cp portable/AGENTS.md ~/.config/opencode/AGENTS.md
+```
+
 ## Modo Fable 5 siempre activo (cualquier modelo)
 
 Los skills se activan por coincidencia con su descripción; para que **cualquier modelo de Anthropic trabaje como Fable 5 en TODAS las sesiones**, copia el bloque de [templates/CLAUDE.md-snippet.md](templates/CLAUDE.md-snippet.md) en el `CLAUDE.md` del proyecto (o en `~/.claude/CLAUDE.md` para todos tus proyectos). Eso ancla `fable-5-mode` + `secure-coding` + `security-gate` como comportamiento obligatorio de sesión.

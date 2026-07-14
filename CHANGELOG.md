@@ -2,6 +2,14 @@
 
 Todos los cambios notables de este repositorio. Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/); versionado [SemVer](https://semver.org/lang/es/).
 
+## [1.2.0] — 2026-07-13
+
+### Añadido
+- Carpeta `portable/`: versión model-agnostic de la metodología para clientes que no son Claude Code y para modelos gratuitos/pequeños.
+  - `portable/AGENTS.md`: ruleset portable en el estándar abierto AGENTS.md (OpenCode, Cursor, Aider, Windsurf, Zed, Gemini CLI, Copilot…), calibrado para modelos pequeños (prescriptivo, con checklists, y guía específica cuando no se puede escalar a un modelo mayor).
+  - `portable/clients.md`: instrucciones de instalación por cliente (OpenCode global y por proyecto, Cursor, Cline, Continue, Aider/Windsurf/Zed, y system prompt para API/chat/Ollama).
+- README: Opción C de instalación para otros clientes y modelos gratuitos.
+
 ## [1.1.0] — 2026-07-13
 
 ### Añadido
